@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAX-WIN</title>
+    <link rel="stylesheet" href="/css/registration.css">
+</head>
+
+<body>
+    <header>
+        <img src="/images/SharedScreenshot.png" alt="" class="logo" height="90">
+        <nav>
+            <ul class="nav_links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="support.html">Support</a>
+                </li>
+                <li>
+                    <a href="vaccine.html">Vaccines</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="registration.html" class="cta"><button>Register</button></a>
+    </header>
+    <section>
+        <div class="question">
+            <div>
+                <h1>Are You Protected aganist Covid-19 ?</h1>
+            </div>
+            <div>
+                <h1>क्या आप कोविड-19 से सुरक्षित हैं ?</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration">
+        <div id="reg">
+            <h3>Register for Vaccination</h3>
+            <p class="notes">
+                Your <strong>Photo ID</strong> will be verified at the time of your vaccination appointment. Please provide the details of the Photo ID you will carry for vaccination.
+            </p>
+            <form action="" method="post">
+               <div class="option">
+                <label for="pid">Photo id Proof</label>
+
+                <select name="pid" id="pid">
+                  <option value="Aadhar Card">Aadhar Card</option>
+                  <option value="Pan Card">Pan Card</option>
+                  <option value="Passport">Passport</option>
+                  <option value="Driving licence">Driving Licence</option>
+                  <option value="Voter Id">Voter Id</option>
+                </select>
+               </div>
+               <div class="number">
+                   <label for="pnum">Photo ID Number</label>
+                   <input type="text" name="pnum" id="pnum" placeholder="Photo ID Number">
+               </div>
+               <div class="name">
+                   <label for="pname">Name</label>
+                   <input type="text" name="pname" id="pname" placeholder="As shown in photo ID">
+               </div>
+               <div class="gender">
+                <p>Gender</p>
+                <label for="male">MALE
+                  <input type="radio" id="male" name="gender" value="MALE">
+                </label>
+                  <label for="female">FEMALE
+                  <input type="radio" id="female" name="=gender" value="FEMALE">
+                </label>
+                  
+               
+
+               </div>
+
+               <div class="year">
+                <label for="pyear">YEAR</label>
+                <input type="number" name="pyear" id="pyear" placeholder="in YYYY format">
+            </div>
+
+            <input type="button" id="sbutton" value="submit">
+            </form>
+        </div>
+    </section>
+   
+</body>
+
+</html>
