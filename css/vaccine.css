@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-* ,
-*::before,
-*::after
-{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: roboto;
 }
 
-li,a,button {
-  font-family: "Montserrat",sans-serif;
+nav li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color:#002060;
+  color: #ffffff;
   text-decoration: none;
-
+}
+nav ul a:hover {
+  background-color: #df5e5e;
 }
 
 header {
@@ -22,7 +25,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  background-color:#45B8AC;
+  background-color: #003638;
+  height: 60px;
+  z-index: 100;
 }
 
 .logo:hover {
@@ -31,37 +36,50 @@ header {
 
 .nav_links {
   list-style: none;
+  padding: 20px 0 0 20;
+}
+nav ul {
+  display: flex;
+}
+.active {
+  background-color: #df5e5e;
 }
 .nav_links li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 20px 20px;
+  /* padding: 20px 0 20px 0; */
+}
+.nav_links li:hover {
+  background-color: #df5e5e;
 }
 .nav_links ul a {
   transition: all 0.3s ease 0s;
 }
 
 button {
-  padding: 9px 25px;
+  padding: 20px 25px;
   border: none;
-  border-radius: 50px;
+  border-radius: 3px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  background-color: #ffc002;
+  background-color: #df5e5e;
 }
 
 .question {
   display: flex;
+  margin: 10px 0 3px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:#00b4d8 ;
+  line-height: 35px;
+  letter-spacing: 0.1em;
+  /* background:#00b4d8 ; */
 }
 
 .question h1 {
   border-bottom: 1px solid black;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 * {
   margin: 0;
@@ -69,7 +87,7 @@ button {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #34495e;
   color: #fff;
 }
@@ -89,7 +107,7 @@ body {
   color: #111;
   margin: 1rem 0;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
@@ -122,7 +140,7 @@ body {
   border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   html {
     font-size: 14px;
   }

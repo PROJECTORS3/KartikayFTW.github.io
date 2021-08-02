@@ -6,28 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VAX-WIN</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="/js/slider.js"></script>
     
 </head>
 
 <body>
-    <header>
+    <header class="nav">
         <img src="/images/SharedScreenshot.png" alt="" class="logo" height="60">
         <nav>
             <ul class="nav_links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="support.html">Support</a>
-                </li>
-                <li>
-                    <a href="vaccine.html">Vaccines</a>
-                </li>
+              <a href="index.html"> <li class="active">
+                    Home
+                </li></a>
+                <a href="support.html"><li>
+                   Support
+                </li></a>
+                <a href="vaccine.html"> <li>
+                    Vaccines
+                </li></a>
             </ul>
         </nav>
-        <a href="registration.html" class="cta"><button>Register</button></a>
+        <a href="registration.html" ><button>Register</button></a>
     </header>
     <section>
     <div class="question">
@@ -89,6 +89,7 @@
 
 
 <h1 id="howtoget">How To Get Your Vaccination</h1>
+<div class="bar"></div>
 <section class="helpcard">
     <div class="card1">
         <img src="/images/vaccination-thumb-1.jpg" alt="">
@@ -113,8 +114,131 @@
     </div>
 </section>
 
+<section class="faq">
+  <h1 id="frequent">Vaccine Providers</h1>
+
+  <div class="accordion">
+      <div class="accordion-item">
+          <div class="accordion-item-header">
+             COVAXIN
+          </div>
+          <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                  <ul style="padding-left: 1rem;">
+                      <li>COVAXIN® is included along with immune-potentiators, also known as vaccine adjuvants, which are added to the vaccine to increase and boost its immunogenicity.</li>
+                      <li>It is a 2-dose vaccination regimen given 28 days apart.</li>
+                      <li>It is a vaccine with no sub-zero storage, no reconstitution requirement, and ready to use liquid presentation in multi-dose vials, stable at 2-8oC.
+                      </li>
+                     <li>COVAXIN® demonstrated 77.8% vaccine efficacy against symptomatic COVID-19 disease, through evaluation of 130 confirmed cases, with 24 observed in the vaccine group versus 106 in the placebo group. The efficacy against severe symptomatic COVID-19 disease is shown to be 93.4%. The efficacy data demonstrates 63.6% protection against asymptomatic COVID-19.</li> 
+                     <li>How Given: Shot in the muscle of the upper arm</li>
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <div class="accordion-item-header">
+              COVISHIELD
+          </div>
+          <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                  <ul style="padding-left: 1rem;">
+                  <li>COVISHIELD™-   ChAdOx1 nCoV- 19 Corona Virus Vaccine (Recombinant)</li>
+                  <li>Each vaccine dose of 0.5 ml is withdrawn into a syringe for injection to be administered intramuscularly. Use a separate
+                      sterile needle and syringe for each individual. It is normal for liquid to remain in the vial after withdrawing the final dose. </li>
+                      <li>It is a 2-dose vaccination regimen given 84 days apart.</li>
+                      <li>How Given: Shot in the muscle of the upper arm</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <div class="accordion-item-header">
+              Pfizer-BioNTech
+          </div>
+          <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                 
+                  <ul style="padding-left: 1rem;">
+                      <li>Number of Shots: 2 shots, 21 days apart</li>
+                      <li>How Given: Shot in the muscle of the upper arm</li>
+                      <li>Type of Vaccine: mRNA</li>
+                      <li>Manufacturer: Pfizer, Inc., and BioNTecht</li>
+                      <li>Does NOT Contain: Eggs, preservatives, latex, metals</li>
+                      <li>How Given: Shot in the muscle of the upper arm</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <div class="accordion-item-header">
+              Johnson & Johnson's  / Janssen
+          </div>
+          <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                 <ul style="padding-left: 1rem;">
+              <li>Name: JNJ-78436735</li>
+              <li>Manufacturer: Janssen Pharmaceuticals Companies of Johnson & Johnson</li>
+              <li>Viral Vector</li>
+              <li>Number of Shots: 1 shot</li>
+              <li>How Given: Shot in the muscle of the upper arm</li>
+              </ul>
+
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+          <div class="accordion-item-header">
+             Moderna
+          </div>
+          <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                  
+                  <ul style="padding-left: 1rem;">
+                  <li>Name: mRNA-1273</li>
+                  <li>Manufacturer: ModernaTX, Inc.</li> 
+                 <li>Type of Vaccine: mRNA</li>
+                 <li>Number of Shots: 2 shots, 28 days apart</li>
+                 <li>How Given: Shot in the muscle of the upper arm</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script>
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+  accordionItemHeaders.forEach(accordionItemHeader => {
+      accordionItemHeader.addEventListener("click", event => {
 
 
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if (accordionItemHeader.classList.contains("active")) {
+              accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+          }
+          else {
+              accordionItemBody.style.maxHeight = 0;
+          }
+
+      });
+  });
+</script>
+
+
+<script>
+  var nav = document.querySelector(".nav");
+  var stick = nav.offsetTop;
+
+  window.onscroll = function(){
+    if(window.pageYOffset >= stick){
+      nav.classList.add("stick");
+    }
+    else{
+      nav.classList.remove("stick");
+    }
+  }
+</script>
 </body>
 
 </html>
