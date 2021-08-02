@@ -195,6 +195,7 @@ input#city {
 }
 
 .state label {
+  font-size: 20px;
 }
 
 select#state.form-control {
