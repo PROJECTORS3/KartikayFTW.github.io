@@ -52,6 +52,9 @@ nav ul {
 .nav_links li:hover {
   background-color: #df5e5e;
 }
+.nav_links ul a:active {
+  background-color: #df5e5e;
+}
 .nav_links ul a {
   transition: all 0.3s ease 0s;
 }
